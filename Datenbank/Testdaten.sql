@@ -23,19 +23,19 @@ INSERT INTO lieferant VALUES (
 );
 
 INSERT INTO raeume (r_nr, r_bezeichnung, r_notiz) VALUES (
-017,
+"017",
 "Computerraum",
 "IF11C Projektraum"
 );
 
 INSERT INTO raeume (r_nr, r_bezeichnung, r_notiz) VALUES (
-316,
+"316",
 "Klassenzimmer",
 "IF11C Klassenzimmer"
 );
 
 INSERT INTO raeume (r_nr, r_bezeichnung, r_notiz) VALUES (
-009,
+"009",
 "Mehrzweckraum",
 "Aquarium"
 );
@@ -83,29 +83,6 @@ INSERT INTO komponenten (
         "Lenovo",
         1
     );
-
-INSERT INTO komponenten (
-    k_id,
-    k_bezeichnung,
-    raeume_r_id,
-    lieferant_l_id,
-    k_einkaufsdatum,
-    k_gewaehrleistungsdauer,
-    k_notiz,
-    k_hersteller,
-    komponentenarten_ka_id
-    ) VALUES (
-        2,
-        "PC02",
-        1,
-        2,
-        sysdate(),
-        5,
-        "PC02 im Raum 017",
-        "Lenovo",
-        1
-    );
-
 INSERT INTO komponenten (
     k_id,
     k_bezeichnung,
@@ -149,6 +126,29 @@ INSERT INTO komponenten (
         "Cisco",
         2
     );
+
+    INSERT INTO komponenten (
+    k_id,
+    k_bezeichnung,
+    raeume_r_id,
+    lieferant_l_id,
+    k_einkaufsdatum,
+    k_gewaehrleistungsdauer,
+    k_notiz,
+    k_hersteller,
+    komponentenarten_ka_id
+    ) VALUES (
+        5,
+        "MS Office",
+        null,
+        2,
+        sysdate(),
+        null,
+        "Microsoft Office Paket",
+        "Microsoft",
+        8
+    );
+
 
 INSERT INTO komponente_hat_attribute (
     komponenten_k_id,
@@ -209,3 +209,18 @@ INSERT INTO komponente_hat_attribute (
     "2x HDMI, 1x VGA"
 );
 
+INSERT INTO software_in_raum (
+    sir_k_id,
+    sir_r_id
+) VALUES (
+    5,
+    1
+);
+
+INSERT INTO software_in_raum (
+    sir_k_id,
+    sir_r_id
+) VALUES (
+    5,
+    2
+);
