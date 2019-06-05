@@ -1,6 +1,8 @@
 # IT-Verwaltung-Martin-Segitz
 Kleines Programm für ein Schulprojekt
 
+## Was wird benötigt ?
+Für die Lokale installation benötigen wir [XAMPP v3.2.2](https://www.apachefriends.org/de/download.html).
 
 ## Aufsetzen der Datenbank
 1. Die 3 Dateien itv_v03.sql, Stammdaten.sql und Testdaten.sql in den bin Ordner von MySQL.
