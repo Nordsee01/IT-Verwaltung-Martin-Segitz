@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.3.11
 -- http://www.phpmyadmin.net
 --
@@ -34,10 +34,16 @@ USE `itv_v04`;
 -- Tabellenstruktur für Tabelle `komponenten`
 --
 
+CREATE TABLE IF NOT EXISTS `Benutzer` (
+  benutzername varchar(10) NOT NULL,
+  passwort varchar(32) NOT NULL,
+  rolle varchar(20) NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 CREATE TABLE IF NOT EXISTS `komponenten` (
   `k_id` int(11) NOT NULL,
   `k_bezeichnung` varchar(100) NOT NULL,
-  `raeume_r_id` int(11) NOT NULL,
+  `raeume_r_id` int(11) NULL,
   `lieferant_l_id` int(11) NOT NULL,
   `k_einkaufsdatum` date DEFAULT NULL,
   `k_gewaehrleistungsdauer` int(11) DEFAULT NULL,
